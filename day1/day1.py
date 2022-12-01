@@ -1,12 +1,3 @@
-# Get data
-
-# loop door alle lines
-	# alle lines tussen witregel in array zetten
-	# array bij elkaar op tellen
-	# vergelijken met andere optellingen
-	# hoogste printen
-
-# Part 1
 with open('inputDay1.txt', 'r') as data:
 	temp = []
 	total = []
@@ -14,10 +5,8 @@ with open('inputDay1.txt', 'r') as data:
 		if len(line) < 3:
 			total.append(sum(map(int, temp)))
 			temp.clear()
-			# print(total)
 		else:
 			temp.append(line)
-			# print(temp)
 	# Part 1
 	print(max(total))
 	# Part 2
