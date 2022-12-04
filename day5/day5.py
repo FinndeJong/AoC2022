@@ -1,0 +1,1 @@
+with open('inputDay5.txt', 'r') as dataset:
