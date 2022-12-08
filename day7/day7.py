@@ -17,13 +17,10 @@ with open('testInput.txt') as dataset:
 				if x[1] == 'cd':
 					if x[2] != '..':
 						dir[x[2]] = []
-						curLocation = ''
 						curLocation = x[2]
-						# print(curLocation)
 					# 	order.append([curLocation])
 					
 					# print(order)
-
 			elif i[0] == 'd':
 				continue
 			else:
@@ -37,7 +34,10 @@ with open('testInput.txt') as dataset:
 				dir[curLocation] = l
 		else:
 			print('Error')
-	# print(dir)
+	print(dir)
+
+	# print(curLocation)
+
 	for q, w in dir.items():
 		if w != []:
 			# print(q, w)
@@ -49,24 +49,34 @@ with open('testInput.txt') as dataset:
 	# print(total2)
 	# print(order)
 
-with open('testInput.txt') as dataset:
-	data = dataset.read().split('\n')
+# with open('testInput.txt') as dataset:
+# 	data = dataset.read().split('\n')
 
-	lineOrder = []
-	tempLineOrder = []
+# 	folderTree = {
+# 		'/': {}
+# 	}
+# 	curLocation = [['/']]
 
-	for i in data:
-		if i[0] == '$':
-			x = i.split(' ')
-			if x[1] == 'cd':
-				# just add to temp array
-				# when .. set temp array to lineOrder
-				# also get this temp order and remove last one
-				# set to remove dupes?
-				if x[2] == '..':
-					lineOrder.append(tempLineOrder)
-					tempLineOrder.pop()
-				else:
-					tempLineOrder.append(x[2])
+# 	# print(data)
+# 	# Read every liness
+# 	for i in data:
+# 		if i[0] == '$':
+# 			if i == '$ cd /' or i == '$ ls':
+# 				continue
+# 			else:
+# 				s = i.split(' ')
+# 				if s[2] == '..':
+# 					curLocation.pop()
+# 				else:
+# 					curLocation.append([s[2]])
+# 			print(curLocation)
 
-	print(lineOrder)
+# 		if i[0] == 'd':
+# 			s = i.split(' ')
+# 			# print(curLocation)
+
+# 			dataFromTree = folderTree
+# 			for l in curLocation:
+# 				print(dataFromTree)
+# 				# dataFromTree = dataFromTree[l[0]]
+
